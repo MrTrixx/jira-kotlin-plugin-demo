@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}"/>
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="jira-kotlin-plugin-demo"/>
+
+
+    <!-- add our web resources -->
+    <web-resource key="jira-kotlin-plugin-demo-resources" name="jira-kotlin-plugin-demo Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        <resource type="download" name="jira-kotlin-plugin-demo.css" location="/css/jira-kotlin-plugin-demo.css"/>
+        <resource type="download" name="jira-kotlin-plugin-demo.js" location="/js/jira-kotlin-plugin-demo.js"/>
+        <resource type="download" name="images/" location="/images"/>
+        <context>jira-kotlin-plugin-demo</context>
+    </web-resource>
+
+
+    <rest name="Demo Plugin Kotlin Rest Resource"
+          key="jira-kotlin-plugin-demo-plugin-rest-resource" path="/kotlin-plugin-demo"
+          version="1.0">
+        <description  key="admin.page.plugin.rest.resource.description">
+            The Rest Resource Plugin '/kotlin-plugin-demo'
+        </description>
+    </rest>
+
+
+</atlassian-plugin>
