@@ -7,4 +7,4 @@ import javax.xml.bind.annotation.XmlRootElement
 
 @XmlRootElement
 @XmlAccessorType(value = XmlAccessType.FIELD)
-data class HealthCheckDto(@XmlElement(required = true) var healthCheckState: String? = "OK") {}
+data class HealthCheckDto(@XmlElement(required = true) val healthCheckState: HealthCheckState = HealthCheckState.OK) {}
