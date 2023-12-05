@@ -199,6 +199,7 @@
                             org.mockito.asm.signature.*;resolution:="optional",
                             com.intellij.mock.*;resolution:="optional",
                             com.intellij.openapi.project.*;resolution:="optional",
+                            com.sun.jna.*;resolution:="optional",
                             *
                         </Import-Package>
                         <!-- Ensure plugin is spring powered -->

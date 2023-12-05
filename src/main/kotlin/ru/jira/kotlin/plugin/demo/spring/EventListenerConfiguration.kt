@@ -11,7 +11,7 @@ open class EventListenerConfiguration {
 
     @Bean
     open fun pluginEventListener(eventPublisher: EventPublisher,
-                            pluginStartServices: List<PluginStartService>): PluginEventListener {
+                                 pluginStartServices: List<PluginStartService>): PluginEventListener {
         return PluginEventListener(eventPublisher, pluginStartServices)
     }
 }
