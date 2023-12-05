@@ -15,7 +15,7 @@ open class GreetingResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     fun greeting(greetingDto: GreetingDto): SubGreetingDto {
-        return greetingDto.sub;
+        return greetingDto.subGreeting;
     }
 
 }
